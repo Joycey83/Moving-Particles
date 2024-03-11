@@ -22,6 +22,18 @@ class Particle {
     context.fill();
     context.stroke();
   }
+
+  update() {
+    this.x += this.vx;
+    if (this.x > this.effect.width - this.radius || this.x < this.radius)
+      this.vx *= -1;
+
+    this.x += this.vy;
+    if (this.y > this.effect.height - this.radius || this.y < this.radius)
+      this.vy *= -1;
+
+    this.y += this.vy;
+  }
 }
 
 class Effect {
