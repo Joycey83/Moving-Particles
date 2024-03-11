@@ -50,6 +50,20 @@ class Effect {
       this.particles.push(new Particle(this));
     }
   }
+  handleParticle(context) {
+    this.particles.forEach((particle) => {
+      particle.draw(context);
+      particle.update();
+    });
+  }
+}
+const effect = new Effect(canvas);
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  // will call handlePartice from animate loop
+  effect.handleParticle(ctx);
+  requestAnimationFrame(animate);
 }
 
-function animate() {}
+animate();
