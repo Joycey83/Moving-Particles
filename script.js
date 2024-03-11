@@ -42,7 +42,7 @@ class Effect {
     this.width = this.canvas.width;
     this.height = this.canvas.height;
     this.particles = [];
-    this.numOfParticles = 20;
+    this.numOfParticles = 250;
     this.createParticles();
   }
   createParticles() {
@@ -61,7 +61,7 @@ const effect = new Effect(canvas);
 
 function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  // will call handlePartice from animate loop
+  // will call handleParticle from animate loop
   effect.handleParticle(ctx);
   requestAnimationFrame(animate);
 }
