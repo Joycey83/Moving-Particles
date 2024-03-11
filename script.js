@@ -13,6 +13,8 @@ class Effect {
     this.canvas = canvas;
     this.width = this.canvas.width;
     this.height = this.canvas.height;
+    this.particles = [];
+    this.numOfParticles = 250;
   }
 }
 
