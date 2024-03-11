@@ -5,11 +5,11 @@ canvas.height = window.innerHeight;
 console.log(ctx);
 
 // Add color gradient
-const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-gradient.addColorStop(1, "white");
-gradient.addColorStop(0.6, "blue");
-gradient.addColorStop(0, "green");
-ctx.fillStyle = gradient;
+// const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+// gradient.addColorStop(1, "white");
+// gradient.addColorStop(0.6, "blue");
+// gradient.addColorStop(0, "green");
+// ctx.fillStyle = gradient;
 
 class Particle {
   constructor(effect) {
@@ -23,7 +23,7 @@ class Particle {
     this.vy = Math.random() * 1 - 0.5;
   }
   draw(context) {
-    // context.fillStyle = "hsl(" + this.x * 0.5 + ", 100%, 50%)";
+    context.fillStyle = "hsl(" + this.x * 0.5 + ", 100%, 50%)";
     context.beginPath();
     context.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
     context.fill();
