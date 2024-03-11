@@ -9,7 +9,11 @@ class Particle {
 }
 
 class Effect {
-  constructor() {}
+  constructor(canvas) {
+    this.canvas = canvas;
+    this.width = this.canvas.width;
+    this.height = this.canvas.height;
+  }
 }
 
 function animate() {}
