@@ -43,6 +43,7 @@ class Effect {
     this.height = this.canvas.height;
     this.particles = [];
     this.numOfParticles = 20;
+    this.createParticles();
   }
   createParticles() {
     for (let i = 0; i < this.numOfParticles; i++) {
