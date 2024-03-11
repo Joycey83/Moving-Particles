@@ -16,6 +16,7 @@ class Effect {
     this.particles = [];
     this.numOfParticles = 250;
   }
+  createParticles() {}
 }
 
 function animate() {}
