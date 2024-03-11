@@ -14,7 +14,7 @@ ctx.fillStyle = gradient;
 class Particle {
   constructor(effect) {
     this.effect = effect;
-    this.radius = Math.random() * 40 + 2;
+    this.radius = Math.random() * 35 + 4;
     this.x =
       this.radius + Math.random() * (this.effect.width - this.radius * 2);
     this.y =
