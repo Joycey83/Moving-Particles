@@ -40,6 +40,17 @@ class Particle {
       this.vy *= -1;
 
     this.y += this.vy;
+
+    // Check if the particle is outside the canvas
+    if (
+      this.x < 0 ||
+      this.x > this.effect.width ||
+      this.y < 0 ||
+      this.y > this.effect.height
+    ) {
+      // If it is, reset the particle
+      this.reset();
+    }
   }
 
   reset() {
