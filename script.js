@@ -52,7 +52,13 @@ class Effect {
     this.particles = [];
     this.numOfParticles = 250;
     this.createParticles();
+
+    window.addEventListener("resize", (e) => {
+      // we want the innerWidth and innerHeight e event
+      this.resize(e.target.window.innerWidth, e.target.window.innerHeight);
+    });
   }
+
   createParticles() {
     for (let i = 0; i < this.numOfParticles; i++) {
       this.particles.push(new Particle(this));
