@@ -44,8 +44,9 @@ class Particle {
 }
 
 class Effect {
-  constructor(canvas) {
+  constructor(canvas, context) {
     this.canvas = canvas;
+    this.context = context;
     this.width = this.canvas.width;
     this.height = this.canvas.height;
     this.particles = [];
@@ -62,6 +63,13 @@ class Effect {
       particle.draw(context);
       particle.update();
     });
+  }
+
+  resize(width, height) {
+    this.canvas.width = width;
+    this.canvas.height = height;
+    this.width = width;
+    this.height = height;
   }
 }
 const effect = new Effect(canvas);
