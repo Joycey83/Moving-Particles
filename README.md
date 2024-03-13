@@ -10,6 +10,13 @@ When the window is resized the same amount of particles are staying inside the c
 
 [View the live project here.](https://moving-particles.netlify.app/)
 
-## Rgb values
+## Moving Particle Screenshot:
 
-![Moving Particle Image]()
+[Moving Particle Image](/moving-particles.png)
+
+## Credit:
+
+Learning the basics of creative coding experiments using HTML canvas from Franks Laboratory
+[Franks Laboratory Youtube Link](https://www.youtube.com/@Frankslaboratory)
+
+[HTML5 Canvas Crash course for beginners](https://www.youtube.com/watch?v=Yvz_axxWG4Y)
