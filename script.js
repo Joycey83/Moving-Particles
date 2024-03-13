@@ -41,6 +41,13 @@ class Particle {
 
     this.y += this.vy;
   }
+
+  reset() {
+    this.x =
+      this.radius + Math.random() * (this.effect.width - this.radius * 2);
+    this.y =
+      this.radius + Math.random() * (this.effect.height - this.radius * 2);
+  }
 }
 
 class Effect {
