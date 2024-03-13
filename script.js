@@ -83,6 +83,9 @@ class Effect {
     this.canvas.height = height;
     this.width = width;
     this.height = height;
+    this.particles.forEach((particle) => {
+      particle.reset();
+    });
   }
 }
 const effect = new Effect(canvas);
