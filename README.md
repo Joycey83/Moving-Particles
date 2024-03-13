@@ -12,11 +12,12 @@ When the window is resized the same amount of particles are staying inside the c
 
 ## Moving Particle Screenshot:
 
-[Moving Particle Image](/moving-particles.png)
+![Moving Particle Image](/moving-particles.png)
 
 ## Credit:
 
-Learning the basics of creative coding experiments using HTML canvas from Franks Laboratory
+Learning the basics of creative coding experiments using HTML canvas from Franks Laboratory.
+
 [Franks Laboratory Youtube Link](https://www.youtube.com/@Frankslaboratory)
 
 [HTML5 Canvas Crash course for beginners](https://www.youtube.com/watch?v=Yvz_axxWG4Y)
