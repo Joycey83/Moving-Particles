@@ -62,7 +62,7 @@ class Effect {
 
     window.addEventListener("resize", (e) => {
       // we want the innerWidth and innerHeight e event
-      this.resize(e.target.window.innerWidth, e.target.window.innerHeight);
+      this.resize(e.target.innerWidth, e.target.innerHeight);
     });
   }
 
@@ -88,7 +88,7 @@ class Effect {
     });
   }
 }
-const effect = new Effect(canvas);
+const effect = new Effect(canvas, ctx);
 
 function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
