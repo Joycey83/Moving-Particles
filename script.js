@@ -29,7 +29,7 @@ class Particle {
     this.vx = Math.random() * 1 - 0.5;
     this.vy = Math.random() * 1 - 0.5;
   }
-  draw(context) {
+  draw(context, gradient) {
     // context.fillStyle = "hsl(" + this.x * 0.5 + ", 100%, 50%)";
     context.fillStyle = gradient;
     context.beginPath();
