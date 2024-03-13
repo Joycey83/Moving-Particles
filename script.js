@@ -11,6 +11,13 @@ console.log(ctx);
 // gradient.addColorStop(0, "green");
 // ctx.fillStyle = gradient;
 
+const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+gradient.addColorStop(1, "#cc5200");
+gradient.addColorStop(0.5, "#6600ff");
+gradient.addColorStop(0, "green");
+ctx.fillStyle = gradient;
+ctx.strokeStyle = "white";
+
 class Particle {
   constructor(effect) {
     this.effect = effect;
@@ -23,7 +30,8 @@ class Particle {
     this.vy = Math.random() * 1 - 0.5;
   }
   draw(context) {
-    context.fillStyle = "hsl(" + this.x * 0.5 + ", 100%, 50%)";
+    // context.fillStyle = "hsl(" + this.x * 0.5 + ", 100%, 50%)";
+    context.fillStyle = gradient;
     context.beginPath();
     context.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
     context.fill();
@@ -40,25 +48,14 @@ class Particle {
       this.vy *= -1;
 
     this.y += this.vy;
-
-    // Check if the particle is outside the canvas
-    if (
-      this.x < 0 ||
-      this.x > this.effect.width ||
-      this.y < 0 ||
-      this.y > this.effect.height
-    ) {
-      // If it is, reset the particle
-      this.reset();
-    }
   }
 
-  reset() {
-    this.x =
-      this.radius + Math.random() * (this.effect.width - this.radius * 2);
-    this.y =
-      this.radius + Math.random() * (this.effect.height - this.radius * 2);
-  }
+  // reset() {
+  //   this.x =
+  //     this.radius + Math.random() * (this.effect.width - this.radius * 2);
+  //   this.y =
+  //     this.radius + Math.random() * (this.effect.height - this.radius * 2);
+  // }
 }
 
 class Effect {
@@ -94,9 +91,15 @@ class Effect {
     this.canvas.height = height;
     this.width = width;
     this.height = height;
-    this.particles.forEach((particle) => {
-      particle.reset();
-    });
+    const gradient = this.context.createLinearGradient(0, 0, width, height);
+    gradient.addColorStop(1, "#cc5200");
+    gradient.addColorStop(0.5, "#6600ff");
+    gradient.addColorStop(0, "green");
+    this.context.fillStyle = gradient;
+    this.context.strokeStyle = "white";
+    // this.particles.forEach((particle) => {
+    //   particle.reset();
+    // });
   }
 }
 const effect = new Effect(canvas, ctx);
