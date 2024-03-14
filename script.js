@@ -21,7 +21,7 @@ ctx.strokeStyle = "white";
 class Particle {
   constructor(effect) {
     this.effect = effect;
-    this.radius = Math.random() * 35 + 4;
+    this.radius = Math.random() * 18 + 2;
     this.x =
       this.radius + Math.random() * (this.effect.width - this.radius * 2);
     this.y =
@@ -82,7 +82,7 @@ class Effect {
     this.width = this.canvas.width;
     this.height = this.canvas.height;
     this.particles = [];
-    this.numOfParticles = 250;
+    this.numOfParticles = 280;
     this.createParticles();
 
     window.addEventListener("resize", (e) => {
